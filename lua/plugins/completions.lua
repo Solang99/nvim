@@ -9,6 +9,7 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 	},
+    {"github/copilot.vim"},
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
