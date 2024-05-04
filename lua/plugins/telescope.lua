@@ -2,15 +2,12 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.6",
-		dependencies = { "nvim-lua/plenary.nvim", "andrew-george/telescope-themes" },
+		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			local telescope = require("telescope")
-
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<c-p>", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-
-			telescope.load_extension("themes")
+			vim.keymap.set("n", "<leader>th", builtin.colorscheme , {})
 		end,
 	},
 
